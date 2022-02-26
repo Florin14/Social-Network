@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.controller.UserAccountEventController">
+    <children>
+        <AnchorPane layoutY="1.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #000080;">
+            <children>
+                <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="21.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/ball.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="77.0" layoutY="27.0" text="Goal!" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <Button fx:id="logoutButton" layoutX="106.0" layoutY="546.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #FF0000;" text="Logout" textFill="#fafafa">
+                    <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Button>
+                <Button fx:id="eventsButton" layoutX="70.0" layoutY="376.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Events" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                    </font>
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Button>
+                <Button fx:id="exploreButton" layoutX="70.0" layoutY="326.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Explore" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="conversationButton" layoutX="70.0" layoutY="276.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Conversation" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                    </font>
+
+                      </Button>
+                <Button fx:id="profileButton" layoutX="70.0" layoutY="226.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Profile" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                    </font>
+
+                      </Button>
+                <Line endX="150.0" layoutX="146.0" layoutY="531.0" startX="-143.0" stroke="WHITE" strokeWidth="3.0">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Line>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="330.0">
+                    <image>
+                        <Image url="@../images/search-3-xl.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="380.0">
+                    <image>
+                        <Image url="@../images/calendar-xl.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="280.0">
+                    <image>
+                        <Image url="@../images/chat-4-xl.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="230.0">
+                    <image>
+                        <Image url="@../images/user-xl.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="welcomeLabel" alignment="TOP_CENTER" layoutX="53.0" layoutY="81.0" prefHeight="80.0" prefWidth="162.0" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+        <Button fx:id="addEventButton" layoutX="326.0" layoutY="26.0" mnemonicParsing="false" onAction="#handle" prefHeight="28.0" prefWidth="97.0" stylesheets="@../css/style.css" text="+ Add Event&#10;" textAlignment="CENTER" textFill="#fafafa">
+            <font>
+                <Font name="Verdana Bold" size="12.0" />
+            </font>
+        </Button>
+      <Button fx:id="discoverButton" layoutX="532.0" layoutY="27.0" mnemonicParsing="false" onAction="#handle" prefHeight="28.0" prefWidth="74.0" stylesheets="@../css/style.css" text="Discover&#10;" textAlignment="CENTER" textFill="#fafafa">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="757.0" layoutY="10.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #ffffff;" text="X" textFill="NAVY">
+         <font>
+            <Font name="Verdana Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="yourEventsButton" alignment="CENTER_RIGHT" layoutX="636.0" layoutY="26.0" mnemonicParsing="false" onAction="#handle" prefHeight="28.0" prefWidth="123.0" stylesheets="@../css/style.css" text="Your Events&#10;" textAlignment="CENTER" textFill="#fafafa">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Button>
+      <Line endX="-81.30000305175781" layoutX="745.0" layoutY="36.0" startX="-95.70002746582031" stroke="WHITE" strokeWidth="2.0" />
+      <Line endX="-81.30000305175781" layoutX="745.0" layoutY="41.0" startX="-95.70002746582031" stroke="WHITE" strokeWidth="2.0" />
+      <Line endX="-81.30000305175781" layoutX="745.0" layoutY="46.0" startX="-95.70002746582031" stroke="WHITE" strokeWidth="2.0" />
+      <VBox layoutX="446.0" layoutY="142.0" prefHeight="300.0" prefWidth="270.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="270.0">
+               <children>
+                  <Label fx:id="eventNameLabel" alignment="CENTER" prefHeight="50.0" prefWidth="270.0" textFill="NAVY">
+                     <font>
+                        <Font name="Verdana Bold Italic" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="250.0" prefWidth="270.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="270.0" />
+                  <Label fx:id="peopleRespondedLabel" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="270.0">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateLabel" layoutX="10.0" layoutY="64.0" prefHeight="50.0" prefWidth="270.0">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="placeLabel" layoutX="10.0" layoutY="119.0" prefHeight="50.0" prefWidth="270.0">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="categoryLabel" layoutX="10.0" layoutY="173.0" prefHeight="50.0" prefWidth="270.0">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Label layoutX="418.0" layoutY="215.0" prefHeight="18.0" prefWidth="86.0" text="Details" textFill="NAVY">
+         <font>
+            <Font name="Verdana Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="410.0" layoutY="254.0">
+         <image>
+            <Image url="@../images/people.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="413.0" layoutY="307.0">
+         <image>
+            <Image url="@../images/clock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="410.0" layoutY="357.0">
+         <image>
+            <Image url="@../images/location.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="410.0" layoutY="403.0">
+         <image>
+            <Image url="@../images/category.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="descriptionLabel" alignment="CENTER" layoutX="366.0" layoutY="474.0" prefHeight="64.0" prefWidth="406.0" textFill="NAVY">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="previousButton" layoutX="349.0" layoutY="538.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #ffffff;" text="&lt;&lt;" textFill="NAVY">
+         <font>
+            <Font name="Verdana Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextButton" layoutX="690.0" layoutY="538.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #ffffff;" text="&gt;&gt;" textFill="NAVY">
+         <font>
+            <Font name="Verdana Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeEventButton" layoutX="500.0" layoutY="535.0" mnemonicParsing="false" onAction="#handle" prefHeight="39.0" prefWidth="98.0" stylesheets="@../css/style.css" text="- Remove &#10;Event&#10;" textAlignment="CENTER" textFill="#fafafa">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Button>
+    </children>
+
+</AnchorPane>

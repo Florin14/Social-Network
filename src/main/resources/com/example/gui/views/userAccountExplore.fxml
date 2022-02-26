@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.controller.UserAccountExploreController">
+
+    <AnchorPane layoutY="1.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #000080;">
+        <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="21.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../images/ball.png" />
+        </ImageView>
+        <Label layoutX="77.0" layoutY="27.0" text="Goal!" textFill="WHITE">
+            <font>
+                <Font name="Verdana Bold" size="20.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Label>
+        <Button fx:id="logoutButton" layoutX="106.0" layoutY="546.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #FF0000;" text="Logout" textFill="#fafafa">
+            <font>
+                <Font name="Verdana Bold" size="14.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Button>
+        <Button fx:id="eventsButton" layoutX="70.0" layoutY="376.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Events" textFill="WHITE">
+            <font>
+                <Font name="Verdana Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="exploreButton" layoutX="70.0" layoutY="326.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Explore" textFill="WHITE">
+            <font>
+                <Font name="Verdana Bold" size="14.0" />
+            </font>
+            <effect>
+                <Bloom />
+            </effect>
+        </Button>
+        <Button fx:id="conversationButton" layoutX="70.0" layoutY="276.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Conversation" textFill="WHITE">
+            <font>
+                <Font name="Verdana Bold" size="14.0" />
+            </font>
+
+        </Button>
+        <Button fx:id="profileButton" layoutX="70.0" layoutY="226.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #000080;" text="Profile" textFill="WHITE">
+            <font>
+                <Font name="Verdana Bold" size="14.0" />
+            </font>
+
+        </Button>
+        <Line endX="150.0" layoutX="146.0" layoutY="531.0" startX="-143.0" stroke="WHITE" strokeWidth="3.0">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Line>
+        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="330.0">
+            <Image url="@../images/search-3-xl.png" />
+        </ImageView>
+        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="380.0">
+            <Image url="@../images/calendar-xl.png" />
+        </ImageView>
+        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="280.0">
+            <Image url="@../images/chat-4-xl.png" />
+        </ImageView>
+        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="30.0" layoutY="230.0">
+            <Image url="@../images/user-xl.png" />
+        </ImageView>
+        <Label fx:id="welcomeLabel" alignment="TOP_CENTER" layoutX="53.0" layoutY="81.0" prefHeight="80.0" prefWidth="162.0" textFill="WHITE">
+            <font>
+                <Font name="Verdana Bold" size="14.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+    <TableView fx:id="tableView" layoutX="315.0" layoutY="146.0" prefHeight="390.0" prefWidth="470.0">
+        <columns>
+            <TableColumn fx:id="colFirstname" editable="false" minWidth="0.0" prefWidth="235.0" resizable="false" sortable="false" text="Firstname" />
+            <TableColumn fx:id="colLastname" editable="false" minWidth="0.0" prefWidth="235.0" resizable="false" sortable="false" text="Lastname" />
+        </columns>
+    </TableView>
+    <TextField fx:id="searchTextField" layoutX="320.0" layoutY="30.0" prefHeight="26.0" prefWidth="161.0" promptText="Search" style="-fx-background-color: #ADD8E6;">
+        <font>
+            <Font name="Verdana Bold" size="12.0" />
+        </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color blue="0.501960813999176" />
+            </color>
+         </DropShadow>
+      </effect>
+    </TextField>
+    <Button alignment="CENTER_RIGHT" layoutX="654.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleSendFriendRequest" prefHeight="43.0" prefWidth="128.0" style="-fx-background-color: #ADD8E6;" text="Add friend &#10;&#10;" textAlignment="CENTER" textFill="NAVY">
+        <font>
+            <Font name="Verdana Bold" size="14.0" />
+        </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color blue="0.501960813999176" />
+            </color>
+         </DropShadow>
+      </effect>
+    </Button>
+    <Button fx:id="myFriendRequestsButton" alignment="TOP_RIGHT" layoutX="658.0" layoutY="544.0" mnemonicParsing="false" onAction="#handle" prefHeight="43.0" prefWidth="114.0" stylesheets="@../css/style.css" text="     Friend    &#10;requests&#10;&#10;" textAlignment="CENTER" textFill="#fafafa">
+        <font>
+          <Font name="Verdana Bold" size="14.0" />
+        </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color blue="0.501960813999176" />
+            </color>
+         </DropShadow>
+      </effect>
+    </Button>
+   <Label layoutX="312.0" layoutY="102.0" text="Maybe you know them:" textFill="NAVY">
+      <font>
+         <Font name="Verdana Bold Italic" size="16.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="648.0" layoutY="75.0">
+      <image>
+         <Image url="@../images/friend1.png" />
+      </image>
+   </ImageView>
+   <Button fx:id="friendRequestsButton" alignment="TOP_LEFT" layoutX="332.0" layoutY="544.0" mnemonicParsing="false" onAction="#handle" prefHeight="43.0" prefWidth="110.0" stylesheets="@../css/style.css" text="Friend&#10;requests &#10;&#10;&#10;" textAlignment="CENTER" textFill="#fafafa">
+      <font>
+         <Font name="Verdana Bold" size="14.0" />
+      </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color blue="0.501960813999176" />
+            </color>
+         </DropShadow>
+      </effect>
+   </Button>
+   <Button fx:id="cancelButton" layoutX="757.0" layoutY="10.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #ffffff;" text="X" textFill="NAVY">
+      <font>
+         <Font name="Verdana Bold" size="17.0" />
+      </font>
+   </Button>
+   <Label layoutX="411.0" layoutY="553.0" prefHeight="23.0" prefWidth="36.0" text="-&gt;" textFill="WHITE">
+      <font>
+         <Font name="Verdana Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="660.0" layoutY="553.0" prefHeight="23.0" prefWidth="36.0" text="&lt;-" textFill="WHITE">
+      <font>
+         <Font name="Verdana Bold" size="18.0" />
+      </font>
+   </Label>
+</AnchorPane>

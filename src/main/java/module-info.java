@@ -16,4 +16,5 @@ module com.example.gui {
     exports com.example.gui.repository;
     exports com.example.gui.domain;
     opens com.example.gui.database to javafx.fxml;
+    exports com.example.gui.repository.db;
 }
